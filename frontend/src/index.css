@@ -1,0 +1,162 @@
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --border: #d9dce1;
+  --text: #1f2328;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --error: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.contenedor {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 1.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Formulario --- */
+.form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+input {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 0.95rem;
+  background: #fff;
+  color: var(--text);
+}
+
+input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+input[aria-invalid='true'] {
+  border-color: var(--error);
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.8rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--primary);
+  color: #fff;
+}
+
+button:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- Tabla --- */
+.tabla-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tabla-cabecera h2 {
+  margin: 0;
+}
+
+.tabla-cabecera input {
+  min-width: 220px;
+}
+
+.tabla-wrap {
+  overflow-x: auto;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.tabla th,
+.tabla td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tabla th {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+.btn-eliminar {
+  background: var(--danger);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.82rem;
+}
+
+.btn-eliminar:hover:not(:disabled) {
+  background: var(--danger-hover);
+}
+
+.vacio {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
